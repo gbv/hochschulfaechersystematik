@@ -19,49 +19,72 @@
   skos:prefLabel "Geisteswissenschaften"@de ;
   skos:narrower <n07#>, <n08#>, <n10#>, <n13#>, <n06#>, <n02#>, <n01#>, <n09#>, <n05#>, <n18#>, <n03#>, <n14#>, <n04#>, <n11#>, <n12#>;
   skos:notation "1" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch <https://d-nb.info/gnd/4019838-8> .
 
 <n2#> a skos:Concept ;
   skos:prefLabel "Sport"@de ;
   skos:narrower <n22#>;
   skos:notation "2" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch <https://d-nb.info/gnd/4056366-2> .
 
 <n3#> a skos:Concept ;
   skos:prefLabel "Rechts-, Wirtschafts- und Sozialwissenschaften"@de ;
   skos:narrower <n33#>, <n25#>, <n32#>, <n23#>, <n28#>, <n24#>, <n27#>, <n26#>, <n29#>, <n31#>, <n30#>;
   skos:notation "3" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch [
+    a skos:Concept ;
+    skos:hasNarrower <https://d-nb.info/gnd/4076570-2> , <https://d-nb.info/gnd/4066528-8>, <https://d-nb.info/gnd/4055916-6>
+  ] .
 
 <n4#> a skos:Concept ;
   skos:prefLabel "Mathematik, Naturwissenschaften"@de ;
   skos:narrower <n42#>, <n40#>, <n44#>, <n43#>, <n37#>, <n36#>, <n41#>, <n39#>;
   skos:notation "4" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch [
+    a skos:Concept ;
+    skos:hasNarrower <https://d-nb.info/gnd/4037944-9> , <https://d-nb.info/gnd/4041421-8>
+  ] .
 
 <n5#> a skos:Concept ;
   skos:prefLabel "Humanmedizin/Gesundheitswissenschaften"@de ;
   skos:narrower <n48#>, <n49#>, <n50#>;
   skos:notation "5" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch [
+    a skos:Concept ;
+    skos:hasNarrower <https://d-nb.info/gnd/4038243-6> , <https://d-nb.info/gnd/4249464-3>
+  ] .
 
 <n7#> a skos:Concept ;
   skos:prefLabel "Agrar-, Forst- und Ernährungswissenschaften, Veterinärmedizin"@de ;
   skos:narrower <n58#>, <n60#>, <n59#>, <n57#>, <n51#>;
   skos:notation "7" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch [
+    a skos:Concept ;
+    skos:hasNarrower <https://d-nb.info/gnd/4068473-8> , <https://d-nb.info/gnd/4155069-9>, <https://d-nb.info/gnd/4152829-3>, <https://d-nb.info/gnd/4078315-7>
+  ] .
 
 <n8#> a skos:Concept ;
   skos:prefLabel "Ingenieurwissenschaften"@de ;
   skos:narrower <n66#>, <n68#>, <n62#>, <n64#>, <n71#>, <n61#>, <n63#>, <n72#>, <n67#>, <n65#>, <n69#>, <n70#>;
   skos:notation "8" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch <https://d-nb.info/gnd/1072478730> .
 
 <n9#> a skos:Concept ;
   skos:prefLabel "Kunst, Kunstwissenschaft"@de ;
   skos:narrower <n75#>, <n77#>, <n76#>, <n74#>, <n78#>;
   skos:notation "9" ;
-  skos:topConceptOf <scheme#> .
+  skos:topConceptOf <scheme#> ;
+  skos:closeMatch [
+    a skos:Concept ;
+    skos:hasNarrower <https://d-nb.info/gnd/4114333-4> , <https://d-nb.info/gnd/4120632-0>
+  ] .
 
 <n01#> a skos:Concept ;
   skos:prefLabel "Geisteswissenschaften allgemein"@de ;
