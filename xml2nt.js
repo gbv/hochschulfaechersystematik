@@ -20,8 +20,10 @@ nodes.forEach(node => {
     : topConcepts.push({id, label, notation})
 })
 
+const namespace = 'http://w3id.org/kim/hochschulfaechersystematik/'
+
 console.log(`
-@base <http://w3id.org/class/hochschulfaechersystematik/> .
+@base <${namespace}> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
@@ -54,3 +56,26 @@ childConcepts.forEach(concept => console.log(`
   skos:notation "${concept.notation}" ;
   skos:inScheme <scheme> .
 `))
+
+const fh = fs.createWriteStream("hochschulfaechersystematik.ndjson")
+
+function jskosHandler(concept) {
+  const jskos = {
+    uri: namespace + concept.id,
+    prefLabel: { de: concept.label },
+    notation: [concept.notation]
+  }
+  if (concept.id !== "n"+concept.notation) {
+    console.error(`Notation mismatch ${concept.id} ${concept.notation}`)
+  }
+  if (concept.parent) {
+    jskos.inScheme = [{ uri: namespace + 'scheme' }]
+    jskos.broader = [{ uri: namespace + concept.parent }]
+  } else {
+    jskos.topConceptOf = [{ uri: namespace + 'scheme' }]
+  }
+  fh.write(JSON.stringify(jskos)+"\n")
+}
+
+topConcepts.forEach(jskosHandler)
+childConcepts.forEach(jskosHandler)
